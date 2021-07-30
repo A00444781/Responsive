@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang=en manifest="manifest.appcache">
+<html>
+<head>
+	<title></title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- 	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script> -->
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="css/jquery.mobile.icons-1.4.5.css"></script>
+	<script type='text/javascript' src='project.js'></script>
+
+</head>
+<body>
+
+	<div data-role="page" id="pageHome">
+		<div data-role="header">
+			<h1>University Database</h1>
+		</div>
+
+		<div data-role="content">
+			<label for="name">Name:</label>
+			<input type='text' name='name' id='name'>
+			<label for="address">Address:</label>
+			<input type='text' name='address' id='address'>
+			<label for="phone">Phone:</label>
+			<input type="text" name='phone' id='phone'>
+			<br>
+			<button onclick="saveInfo();" data-icon="check" class="ui-btn ui-icon-check ui-btn-icon-left ui-shadow-icon ui-btn-b">Save</button>
+			<button onclick="deleteInfo();" class="ui-btn ui-icon-delete ui-btn-icon-left ui-shadow-icon ui-btn-b">Delete</button>
+			<br><br>
+			<label for="search">Search:</label>
+			<input type="text" name='search' id='search'>
+			<button onclick="searchInfo();" class="ui-btn ui-icon-search ui-btn-icon-left ui-shadow-icon ui-btn-b">Search</button>
+			<br>
+			<button onclick="displayRecords();" class="ui-btn ui-icon-eye ui-btn-icon-left ui-shadow-icon ui-btn-b">Display records</button>
+			<br><br>
+			<div data-role="fieldcontain">
+				<table id="displayTable" class="ui-responsive table-stroke">
+				</table>
+			</div>
+			<div data-role="fieldcontain">
+
+				<br><br>
+			</div>
+
+			<div data-role = footer data-id="persistent" data-position="fixed">
+				<h1>Developed by Johnny Liu A00444781.</h1>
+			</div>
+
+		</div>
+
+	</body>
+	</html>

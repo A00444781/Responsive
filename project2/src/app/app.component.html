@@ -1,0 +1,57 @@
+<h1>University Database App</h1>
+<h5>Powered by Ziwei Liu A00444781</h5>
+<form>
+
+  <div class="form-group">
+    <label for="universityName">University Name </label>
+    <input type="text" class="form-control" name="name" [(ngModel)]="name" required="required">
+  </div><br>
+
+  <div class="form-group">
+    <label for="universityAddress">University Address </label>
+    <input type="text" class="form-control" name="address" [(ngModel)]="address" required="required">
+  </div><br>
+
+  <div class="form-group">
+    <label for="universityPhoneNumber">University Phone Number </label>
+    <input type="tel" class="form-control" name="phone" [(ngModel)]="phone" required="required">
+  </div><br>
+
+  <div class="btn-toolbar">
+    <button type="submit" (click)="saveUniversity()">SAVE</button>
+    <br><br>
+    <button type="submit" (click)="deleteUniversity()">DELETE</button>
+  </div><br><br>
+
+  <div class="form-group">
+    <label for="universitySearchName">SEARCH:</label>
+    <input type="text" class="form-control" name="searchname" [(ngModel)]="searchname">
+  </div><br>
+  <div class="btn-toolbar">
+    <button type="submit" (click)="searchUniversity()">SEARCH</button>
+  </div><br>
+  <div class="btn-toolbar">
+    <button type="submit" (click)="displayUniversities()">DISPLAY RECORDS</button>
+  </div><br>
+  <div class="col-md-8 mt-4 mb-4">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>NAME</th>
+          <th>ADDRESS</th>
+          <th>PHONE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of listData">
+          <td><span>{{item.Name}}</span></td>
+          <td><span>{{item.Address}}</span></td>
+          <td><span>{{item.PhoneNumber}}</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+</form>
